@@ -14,6 +14,7 @@ public class TerminController {
     @GetMapping("/")
     public String termine(Model model) {
         model.addAttribute("termine", terminService.findAll());
+        model.addAttribute("headText", "Termin Service");
 
         return "termine";
     }
