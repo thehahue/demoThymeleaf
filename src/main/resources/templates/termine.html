@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminplanung</title>
+</head>
+<body>
+<p th:if="${#lists.isEmpty(termine)}">Noch keine Terine vorhanden</p>
+<table th:if="${!#lists.isEmpty(termine)}">
+    <tbody>
+    <tr th:each="termin: ${termine}">
+        <td th:text="${termin.getTitel()}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
