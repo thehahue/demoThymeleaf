@@ -8,9 +8,22 @@
 <body>
 <p th:if="${#lists.isEmpty(termine)}">Noch keine Terine vorhanden</p>
 <table th:if="${!#lists.isEmpty(termine)}">
+    <thead>
+        <tr>
+            <th>Datum</th>
+            <th>Uhrzeit</th>
+            <th>Titel</th>
+            <th>Teilnehmer</th>
+            <th>Notiz</th>
+        </tr>
+    </thead>
     <tbody>
     <tr th:each="termin: ${termine}">
+        <td th:text="${#temporals.format(termin.getDatum(), 'dd.MM.yyy')}"></td>
+        <td th:text="${#temporals.format(termin.getUhrzeit(), 'HH:mm')}"></td>
         <td th:text="${termin.getTitel()}"></td>
+        <td th:text="${termin.getTeilnehmer()}"></td>
+        <td th:text="${termin.getNotiz()}"></td>
     </tr>
     </tbody>
 </table>

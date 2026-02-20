@@ -9,15 +9,15 @@ public class Termin {
     private String teilnehmer;
     private String notiz;
     private LocalDate datum;
-    private LocalTime urzeit;
+    private LocalTime uhrzeit;
 
-    public Termin(Long id, String titel, String teilnehmer, String notiz, LocalDate datum, LocalTime urzeit) {
+    public Termin(Long id, String titel, String teilnehmer, String notiz, LocalDate datum, LocalTime uhrzeit) {
         this.id = id;
         this.titel = titel;
         this.teilnehmer = teilnehmer;
         this.notiz = notiz;
         this.datum = datum;
-        this.urzeit = urzeit;
+        this.uhrzeit = uhrzeit;
     }
 
     public Long getId() {
@@ -40,7 +40,7 @@ public class Termin {
         return datum;
     }
 
-    public LocalTime getUrzeit() {
-        return urzeit;
+    public LocalTime getUhrzeit() {
+        return uhrzeit;
     }
 }
